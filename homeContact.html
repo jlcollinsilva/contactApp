@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+  </head>
+  <body>
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+          <h2> <img src="contact.png"> My Favorites Contacts:</h2>
+
+          <button id="btnaddContact" type="button" class="btn btn-primary btn-md">
+            <span class="glyphicon glyphicon-plus-sign"></span> Add Contact
+          </button>
+
+        </div>
+        </div>
+
+        <div class="navbar-header">
+
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input id = "searchId" type="text" class="form-control" placeholder="Search by Name">
+            </div>
+              <button id="btnsearchContact" type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-search"></span> Search
+              </button>
+          </form>
+      </div>
+
+
+        <table id="tableContact" class="table table-striped">
+            <tr>
+              <th>
+                Name
+              </th>
+              <th>
+                Phone
+              </th>
+              <th>
+                Email
+              </th>
+              <th>
+                Actions
+              </th>
+            </tr>
+          </table>
+
+
+    <div class="container">
+              <div id="modalConfirm" class="modal fade" >
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                      <h4 class="modal-title"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        Confirm Delete</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form role="form" id="formConfirm">
+                        <div class="form-group">
+                          <span id="confirmMsg" ></span>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" id="bYes" class="btn btn-primary" >Yes</button>
+                      <button type="button" id="bNo" class="btn btn-default" data-dismiss="modal" >No</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="homeContact.js">  </script>
+
+  </body>
+</html>
