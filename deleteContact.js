@@ -1,8 +1,8 @@
-//Control of the action of Add a new Movie
-var parameterIndex = window.location.search.substr(1);
+
+var parameterIndex = window.location.search.substr(1); //there is just one parameter and start at position 1.
 var deleteArr = JSON.parse(localStorage.getItem('contactList'));
 
-if (parameterIndex < 0 || parameterIndex > deleteArr.length - 1){
+if (parameterIndex < 0 || parameterIndex > deleteArr.length - 1){ //Just in case of some anormal pass
   alert('Contact data invalid..try again!!!!');
   window.location = "homeContact.html";
 } else {
@@ -12,7 +12,7 @@ if (parameterIndex < 0 || parameterIndex > deleteArr.length - 1){
     $('#contactEmail').val(deleteArr[parameterIndex].contactEmail);
 }
 
-//Control of the Delete confirmation modal
+//Control of the confirm (submit) button for Delete Contact
 //When the user confirm that he is sure about delete the movie...
 
 document.getElementById('btndelContact').addEventListener('click',function(){
@@ -20,7 +20,7 @@ document.getElementById('btndelContact').addEventListener('click',function(){
     var newArr = deleteArr.splice(parameterIndex,1);
     //Update the "Array", actually localStorage
     localStorage.setItem('contactList',JSON.stringify(deleteArr));
-    //Update the screen for the user after the record delete..
+    //Return to the main page....
     alert('Contact deleted Sucessfully!!!!');
     window.location = "homeContact.html";
   });

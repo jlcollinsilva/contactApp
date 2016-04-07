@@ -9,12 +9,13 @@ document.getElementById('btnsaveContact').addEventListener('click',function(){
       }else if (/\d{3}-\d{3}-\d{4}$/.test($('#contactPhone').val()) == false) {
         alert('Invalid Phone number format, must be 999-999-9999, try again!!!');
         document.getElementById('contactPhone').focus();
+        //the follow RegExp was extracted from http://www.w3schools.com
       }else if (/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/.test($('#contactEmail').val()) == false) {
         alert('Invalid email address format, must be similar to username@domain.com,try again!!!');
         document.getElementById('contactEmail').focus();
      } else {
 
-    // construct the table record
+    // construct the record for the table....
    var contact = {contactName:$('#contactName').val(),
                 contactPhone:$('#contactPhone').val(),
                 contactEmail:$('#contactEmail').val()};
