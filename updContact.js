@@ -22,7 +22,6 @@ if (parameterIndex < 0 || parameterIndex > contactArr.length - 1){
         }else if (/\d{3}-\d{3}-\d{4}$/.test($('#contactPhone').val()) == false) {
           alert('Invalid Phone number format, must be 999-999-9999, try again!!!');
           document.getElementById('contactPhone').focus();
-          //RegExp copied from http://www.w3schools.com
         }else if (/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/.test($('#contactEmail').val()) == false) {
           alert('Invalid email address format, must be similar to username@domain.com,try again!!!');
           document.getElementById('contactEmail').focus();
@@ -47,7 +46,7 @@ if (parameterIndex < 0 || parameterIndex > contactArr.length - 1){
         }
       });
 
-} //end Else invalid data
+} //end Else Data Invalid
 
 //Control of the action of Cancel the action of Add a new Contact
 document.getElementById('btncancelSave').addEventListener('click',function(){
