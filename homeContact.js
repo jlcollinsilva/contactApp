@@ -13,18 +13,18 @@ $('body').on('click', 'button.btndelete', function() {
 });
 
 $('body').on('click', 'button.btnupdate', function() {
-    // do something
-    window.location = "updateContact.html?"+this.id.substr(4);
+    // for any delete button in the table of contacts
+    window.location = "updateContact.html?"+this.id.substr(4); //the position 4 of the button id is "hide" his position in the array (localstorage)
 });
 
 $('#searchId').val(sessionStorage.getItem('lastSearch'));
 
-if ($('#searchId').val() !== "" && $('#searchId').val !== null) {
+if ($('#searchId').val() !== "" && $('#searchId').val !== null) { //only if the user give a criterie for to search
   searchContacts();
   }
 
 
-//Logical for read all the movies and show them on the webpage
+//Logical for read all the contacts and show them on the webpage in a table format
 function searchContacts(){
 
   if (localStorage.getItem("contactList") !== null) {
@@ -43,8 +43,8 @@ function searchContacts(){
              item = {contactName:contactObj[k].contactName,
                     contactPhone:contactObj[k].contactPhone,
                     contactEmail:contactObj[k].contactEmail,
-                    contactIndex:k};
-              filtered.push(item);
+                    contactIndex:k}; //For to keep the original position in the array
+              filtered.push(item); //Populate the new array with the results of the search.
                   }
           }
 
